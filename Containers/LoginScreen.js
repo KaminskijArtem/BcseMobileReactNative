@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 
 export default class LoginScreen extends React.Component {
   render() {
@@ -24,6 +24,10 @@ export default class LoginScreen extends React.Component {
           onPress={() => this.props.navigation.navigate('drawerStack')} >
           Pretend we logged in
         </Text>
+        <Image
+          style={{width: 30, height: 30}}
+          source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
+        />
       </View>
     )
   }
