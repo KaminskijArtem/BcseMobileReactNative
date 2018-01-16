@@ -4,15 +4,6 @@ import { NavigationActions } from 'react-navigation'
 
 export default class DrawerContainer extends React.Component {
 
-  logout = () => {
-    const actionToDispatch = NavigationActions.reset({
-      index: 0,
-      key: null,  // black magic
-      actions: [NavigationActions.navigate({ routeName: 'loginStack' })]
-    })
-    this.props.navigation.dispatch(actionToDispatch)
-  }
-
   render() {
     const { navigation } = this.props
     return (
@@ -31,11 +22,6 @@ export default class DrawerContainer extends React.Component {
           onPress={() => navigation.navigate('screen3')}
           style={styles.uglyDrawerItem}>
           Screen 3
-        </Text>
-        <Text
-          onPress={this.logout}
-          style={styles.uglyDrawerItem}>
-          Log Out
         </Text>
       </View>
     )
